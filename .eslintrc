@@ -1,0 +1,37 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "import",
+    "no-require-lodash"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "plugin:import/warnings"
+  ],
+  "rules": {
+    "max-len": [2, 240, 4, { "ignoreUrls": true, "ignoreTrailingComments": true }],
+    "no-param-reassign": [2, { "props": false }],
+    "no-unused-vars": [1, { "args": "none" }],
+    "new-cap": [2, {
+      "capIsNewExceptions": ["DragSource", "DropTarget", "DragDropContext", "DragLayer"]
+    }],
+    "comma-dangle": 0,
+    # "no-underscore-dangle": 1,
+    # "no-extra-semi": 0,
+    # "prefer-arrow-callback": 1,
+    # "no-require-lodash/no-require-lodash": 2
+  }
+}
